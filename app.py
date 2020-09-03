@@ -9,11 +9,10 @@ import pandas as pd
 import plotly.express as px
 
 #Load in data with pandas
-plot_data = pd.read_csv('/Users/blazeyt/Desktop/temp_data.csv',
+plot_data = pd.read_csv('./temp_data.csv',
                         parse_dates=['Datetime'],
                         dtype={'Temperature': 'float64', 'Status': object})
                        
-
 #Create scanner plot
 fig = px.scatter(plot_data,
                  x='Datetime',
@@ -69,7 +68,6 @@ fig.update_layout(dragmode = 'pan',
                          'title_font_size' : 16,
                          'font':{'color' :'black', 'size' : 14}})
 
-
 #Create dash app for showing plot
 config = dict({'scrollZoom': True})
 app = dash.Dash()
@@ -78,4 +76,5 @@ app.layout = html.Div([
 ])
 
 #Run app
-app.run_server()
+if __name__ == '__main__':
+    app.run_server()
