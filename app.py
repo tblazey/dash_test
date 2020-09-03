@@ -11,7 +11,7 @@ import plotly.express as px
 #Load in data with pandas
 plot_data = pd.read_csv('/Users/blazeyt/Desktop/temp_data.csv',
                         parse_dates=['Datetime'],
-                        dtype={'Temperature': float64, 'Status': object})
+                        dtype={'Temperature': 'float64', 'Status': object})
                        
 
 #Create scanner plot
