@@ -71,6 +71,7 @@ fig.update_layout(dragmode = 'pan',
 #Create dash app for showing plot
 config = dict({'scrollZoom': True})
 app = dash.Dash()
+server = app.server
 app.layout = html.Div([
     dcc.Graph(figure=fig, config=config)
 ])
