@@ -70,7 +70,7 @@ fig.update_layout(dragmode = 'pan',
 
 #Create dash app for showing plot
 config = dict({'scrollZoom': True})
-app = dash.Dash(title='Spinlab Temperature')
+app = dash.Dash(__name__, title='Spinlab Temperature')
 server = app.server
 app.layout = html.Div(
     children=[
