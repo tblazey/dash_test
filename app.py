@@ -95,7 +95,7 @@ app.layout = html.Div(
                                          style={'max-width': '100%',
                                                 'max-height':'100%',
                                                 'padding-top':'2vw',
-                                                'padding-left':'2vw'})
+                                                'padding-left' :'2vw'})
                             ]
                         )                     
                     ]
