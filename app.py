@@ -59,7 +59,7 @@ fig.update_layout(dragmode = 'pan',
                   title_font_color = 'black',
                   title_font_size = 24,
                   title_x = 0.5,
-                  legend={'y' : 0.6,
+                  legend={'y' : 0.5,
                          'title' : '<b>Status</b>',
                          'xanchor' : 'center',
                          'bgcolor' : 'rgba(255, 255, 255, 1)',
@@ -70,7 +70,7 @@ fig.update_layout(dragmode = 'pan',
 
 #Create dash app for showing plot
 config = dict({'scrollZoom': True})
-app = dash.Dash()
+app = dash.Dash(title='Spinlab Temperature')
 server = app.server
 app.layout = html.Div([
     dcc.Graph(figure=fig, config=config)
