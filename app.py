@@ -16,7 +16,7 @@ plot_data = pd.read_csv('./temp_data.csv',
 
 #Get info about last update
 last_time = plot_data['Datetime'].iloc[-1]
-up_str = 'Last Updated at: %s'%(last_time.strftime('%m-%d-%Y %I:%M%:%S %p'))
+up_str = 'Last Updated at: %s'%(last_time.strftime('%m-%d-%Y %I:%M:%S %p'))
           
 #Create scatter temperature plot
 tp = px.scatter(plot_data,
