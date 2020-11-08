@@ -76,7 +76,6 @@ tp.update_layout(dragmode = 'pan',
 #Load in spectrogram data
 spec_data = np.load('./spec.npz')
 
-
 #Create spectogram plot
 sp = px.imshow(spec_data['spec'], x=spec_data['time'], y=spec_data['freq'], aspect='auto', zmax=2000)
 sp.update_xaxes(autorange = True,
@@ -117,7 +116,7 @@ app.layout = html.Div(
                 dcc.Tabs([
                     dcc.Tab(label='Latest Cyrostatus Page',
                         children=[
-                            html.Img(src=app.get_asset_url('2020-08-28-18-56-27.png?dummy=371662'),
+                            html.Img(src=app.get_asset_url('2020-08-28-18-56-27.png?dummy=%i'%(np.random.randint(0, 1E6))),
                                     style={'max-width': '100%',
                                            'max-height':'100%',
                                            'padding-top':'2vw',
